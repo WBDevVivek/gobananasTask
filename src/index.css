@@ -1,13 +1,110 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    transition: all 0.5s;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+    --BackColor: #0b131e;
+    --ContaintColor: #202b3b;
+    --textColor: #9da7b6;
 }
+
+body {
+    background-color: var(--BackColor);
+}
+
+
+.App {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5%;
+    gap: 20px;
+}
+
+.dataTableSec {
+    width: 100%;
+    height: fit-content;
+    max-width: 1024px;
+    border: 5px solid red;
+    margin: 0 auto;
+}
+
+.Paper {
+    background-color: var(--BackColor);
+}
+
+.tableCell,
+.pagination {
+    background-color: var(--ContaintColor);
+    color: var(--textColor);
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    padding: 8px 10px;
+    font-size: 160%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+svg {
+    fill: var(--textColor);
+    stroke: var(--textColor);
+}
+
+.css-1iz4iln svg {
+    fill: red;
+    stroke: red;
+    transform: scale(2);
+}
+
+.cardClass {
+    background-color: var(--ContaintColor) !important;
+    color: var(--textColor) !important;
+}
+
+.searchTempCardSec{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+/* ------------------------------------------------------------- */
+
+
+@media (max-width: 1024px) {
+    .searchTempCardSec{
+        flex-direction: column;
+    }
+}
+
+
+
+@media (max-width: 420px) {
+
+    .css-78c6dr-MuiToolbar-root-MuiTablePagination-toolbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .tableCell,
+    .pagination {
+
+        font-size: 110%;
+    
+    }
+
+}
+
+
+
+/* ------------------------------------------------------------- */
