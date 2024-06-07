@@ -3,10 +3,12 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
+import { colors } from '@mui/material';
 
 export default function TempCard({ cityNameWeatherData }) {
     return (
-        cityNameWeatherData  ?
+
+        cityNameWeatherData ?
 
             <Card sx={{
                 maxWidth: "auto", minWidth: 300, display: "flex", justifyContent: "space-between", alignItems: "center", flexDirection: "row",
@@ -42,6 +44,6 @@ export default function TempCard({ cityNameWeatherData }) {
                         <span>{cityNameWeatherData?.main?.temp}</span> <b><sup>o</sup>C</b>
                     </Typography>
                 </CardContent>
-            </Card> : <h1>loading....</h1>
+            </Card> : <h1 style={{ color: "red" }}>loading....</h1>
     );
 }

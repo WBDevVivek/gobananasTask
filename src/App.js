@@ -45,7 +45,7 @@ function App() {
   }, [])
 
 
-  // console.log(cityData)
+  console.log(cityData)
 
 
 
@@ -110,7 +110,7 @@ function App() {
         return num.toLowerCase();
       })
       .join(" ")
-      // .toLowerCase()
+      .toLowerCase()
       .includes(searchValue);
   }
 

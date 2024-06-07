@@ -15,6 +15,7 @@ import { tableColumns } from './tableColData';
 
 
 export default function DataTable({ handleSearch, setCityName }) {
+    
     const [page, setPage] = React.useState(0);
     const [rowsPerPage, setRowsPerPage] = React.useState(10);
 
@@ -93,6 +94,6 @@ export default function DataTable({ handleSearch, setCityName }) {
                     className='pagination'
                     sx={{ background: "transparent", color: "#9da7b6", heigth: "auto", border: "2px solid red, ", flexDirection: 'column', marginTop: 5 }}
                 />
-            </Paper > : <h1>loading....</h1>
+            </Paper > : <h1 style={{ color: "red" }}>loading....</h1>
     );
 }
