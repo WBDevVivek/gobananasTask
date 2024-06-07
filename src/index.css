@@ -50,7 +50,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    line-height: 40px;
+    line-height: 25px;
     cursor: pointer;
 }
 
