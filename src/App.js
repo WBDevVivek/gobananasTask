@@ -25,8 +25,8 @@ function App() {
         throw new Error(response.statusText)
       }
       const data = await response.json();
-      const result = await data?.results
 
+      const result = await data?.results
 
       if (result.length > 0) {
 
@@ -110,7 +110,7 @@ function App() {
         return num.toLowerCase();
       })
       .join(" ")
-      .toLowerCase()
+      // .toLowerCase()
       .includes(searchValue);
   }
 
@@ -119,7 +119,7 @@ function App() {
 
   return (
 
-    (handleSearch() && handleSearch()?.length > 0) ?
+    // (handleSearch() && handleSearch()?.length > 0) ?
 
       <div className="App">
 
@@ -131,7 +131,9 @@ function App() {
         </div>
         <DataTable handleSearch={handleSearch} setCityName={setCityName} />
 
-      </div> : <h1>loading....</h1>
+      </div> 
+      
+      // : <h1>loading....</h1>
   );
 }
 
